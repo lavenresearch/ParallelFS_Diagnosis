@@ -1,7 +1,7 @@
 # Writing Ganglia Python Module
 
 ## Step 1 : configure ganglia to use python module
-TheConfiguration file for Mod_Python(__modpython.conf__) can usually be found in Ganglia’s etc/conf.d directory of the Ganglia installation.(In our system, the path is __/etc/ganglia/conf.d__)
+The Configuration file for Mod_Python(__modpython.conf__) can usually be found in Ganglia’s etc/conf.d directory of the Ganglia installation.(In our system, the path is __/etc/ganglia/conf.d__)
 
     modules { 
         module { 
@@ -56,3 +56,30 @@ The value of the name parameter will be the name of the metric that is gathered.
 ### metric_cleanup()
 
 This function will be called once when gmond is shutting down. The cleanup function should include any code that is required to close files, disconnection from the network, or  any  other  type  of  clean  up  functionality.  Like  the  metric_init function,  the cleanup function must be called metric_cleanup and must not take any parameters. In addition, the cleanup function must not return a value. 
+
+## Step 3 : configure a python metric module
+
+Any module specific configuration to be specified in the configuration file and passed to the module at initialization time.
+
+    modules{
+        module{
+            name = ""
+            language = "python"
+            param <param_1> {
+                value = whatever0
+            }
+            param <param_2> {
+                value = newvalue
+            }
+        }
+    }
+
+1. The value of the namedirective must match the file name of the Python module’s .py file.
+2. the value of the languagedirective for a Python module must be "python". 
+3. One thing to note is that the value of a parameter will always be passed to the metric module as a string within a dictionary object. If the module requires some data type other than a string, the string value of the parameter will have to be cast to the correct data type before it is used. 
+
+## Step 4 : deploy a python metric module
+
+1. copy module's .py file to the ganglia python module directory.(specified in the Mod_Python configuration file.)
+2. Then make sure that the module’s .pyconf file has been copied to the Ganglia’s etc/conf.d directory as well. 
+

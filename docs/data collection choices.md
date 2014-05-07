@@ -24,6 +24,7 @@ peer-divergence
     * avgqu-sz: average number of queued disk I/O requests
     * await: Average time (in milliseconds) that a request waits to complete; includes queuing delay andservice time.
     * svctm: average time to response I/O requests( only disk servicing time, queuing delay not included)
+    * %util: Percentage of CPU time in which I/O requests are made to the disk.
 3. cwnd
     * cwnd: number of segments allowed to be sent outstanding without acknowledgment( congestion control window )
 

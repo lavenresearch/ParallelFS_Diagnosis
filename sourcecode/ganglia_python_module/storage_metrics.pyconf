@@ -1,12 +1,43 @@
 modules{
     module{
-        name = ""
+        name = "storage_metrics"
         language = "python"
-        param <param_1> {
-            value = whatever
-        }
-        param <param_2> {
-            value = newvalue
-        }
     }
+}
+
+collection_group {
+  collect_every = 10
+  time_threshold = 50
+  metric {
+    name = "tps"
+    value_threshold = 1.0
+  }
+  metric {
+    name = "rd_sec"
+    value_threshold = 1.0
+  }
+  metric {
+    name = "wr_sec"
+    value_threshold = 1.0
+  }
+  metric {
+    name = "avgrq_sz"
+    value_threshold = 1.0
+  }
+  metric {
+    name = "avgqu_sz"
+    value_threshold = 1.0
+  }
+  metric {
+    name = "await"
+    value_threshold = 1.0
+  }
+  metric {
+    name = "svctm"
+    value_threshold = 1.0
+  }
+  metric {
+    name = "util"
+    value_threshold = 1.0
+  }
 }
