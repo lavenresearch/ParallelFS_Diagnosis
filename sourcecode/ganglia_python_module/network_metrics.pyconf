@@ -1,0 +1,12 @@
+modules{
+    module{
+        name = ""
+        language = "python"
+        param <param_1> {
+            value = whatever
+        }
+        param <param_2> {
+            value = newvalue
+        }
+    }
+}

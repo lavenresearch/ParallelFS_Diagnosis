@@ -1,0 +1,9 @@
+Sysstat version:		10.2.1
+   Installation prefix:		/usr/local
+   rc directory:		/etc/init.d
+   Init directory:		/etc/init.d
+   Systemd unit dir:		
+   Configuration directory:	/etc/sysconfig
+   Man pages directory:		${datarootdir}/man
+   Compiler:			gcc
+   Compiler flags:		-g -O2
