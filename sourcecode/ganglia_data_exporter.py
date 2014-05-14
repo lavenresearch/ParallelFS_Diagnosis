@@ -104,9 +104,9 @@ class Ganglia_Cluster:
         db_cursor = db_connection.cursor()
         db_cursor.execute('''
             CREATE TABLE %s (
-                node        TEXT        PRIMARY KEY,
-                metric      TEXT        PRIMARY KEY,
-                timestamp   TIMESTAMP   PRIMARY KEY,
+                node        TEXT,
+                metric      TEXT,
+                timestamp   TIMESTAMP,
                 value       FLOAT)
             '''% self.table_name)
         db_cursor.close()
