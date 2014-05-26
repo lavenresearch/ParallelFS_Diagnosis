@@ -59,6 +59,7 @@ class Ganglia_Cluster:
     # db_name = ""
     db_path = ""
     table_name = ""
+    cluster_old_status = {}
 
     def find_nodes(self):
         node_name_list = []
@@ -81,6 +82,7 @@ class Ganglia_Cluster:
             # print node.metrics_path
             self.nodes_list.append(node)
             self.nodes[node_name] = node
+        cluster_old_status = {}
             # print self.nodes_list[-1].metrics_path
     # the cluster_path format is "/var/lib/ganglia/rrds/ds-new/"
     # the cluster_name format is "ds-new"
@@ -127,9 +129,15 @@ class Ganglia_Cluster:
                 if not record:
                     # print record,"continue"
                     continue
+                print "cluster old status",self.cluster_old_status
+                print node,metric,record
+                if self.cluster_old_status :
+                    if self.cluster_old_status[node][metric]["timestamp"] == record["timestamp"]:
+                        continue
                 db_cursor.execute(save_query,[node,metric,record['timestamp'],record['value']])
         db_connection.commit()
         db_connection.close()
+        self.cluster_old_status = cluster_status
     def view_status_from_db(self):
         # print "in view db function"
         if not self.db_path and not self.table_name:
@@ -154,7 +162,7 @@ if __name__ == '__main__':
         print status
     cluster.create_cluster_status_db()
     # cluster.load_cluster_status_db()
-    for i in xrange(10):
+    for i in xrange(50):
         cluster.save_status_to_db()
         print i
         time.sleep(3)

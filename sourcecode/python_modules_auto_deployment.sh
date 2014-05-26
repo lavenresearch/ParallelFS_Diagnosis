@@ -1,4 +1,6 @@
 #!/bin/bash
+# important!!!!
+# this script do not work until local machine and remote machines have been configured to trust each other.
 node_addr="192.168.3.140 192.168.3.141 192.168.3.142 192.168.3.143 192.168.3.144"
 for addr in $node_addr
 do

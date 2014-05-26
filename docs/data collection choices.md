@@ -1,6 +1,6 @@
 # 2 kinds of problems
-1. disk busy[^mistake]: cause by cron jobs like _updatedb_ for GNU _locate_ etc. this is due to file server OS itself.
-2. disk hog[^mistake]: cause by third-party/unmonitored node run a disk hog process on the shared storage devices. this increase throughput of the file server.
+1. disk hog: cause by cron jobs like _updatedb_ for GNU _locate_ etc. this is due to file server OS itself.
+2. disk busy: cause by third-party/unmonitored node run a disk hog process on the __shared storage devices__. this increase throughput of the file server.
 3. network hog: result from traffic-emitter like a backup process, or the receipt of data during a denial-of-service attack. view increase throughput.
 4. packet loss(network busy): result of network congestion.
 
@@ -31,5 +31,3 @@ peer-divergence
 # tools/source for data collection
 1. [sysstat](http://sebastien.godard.pagesperso-orange.fr)
 2. /proc/net/tcp
-
-[^mistake]: 这两个定义有问题，应该是相反的！
