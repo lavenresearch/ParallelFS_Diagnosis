@@ -1,0 +1,8 @@
+Metric:svctm 2.6582828
+Metric:avgrq-sz 82.4144
+Metric:%util 62.78578
+Metric:await 45.302753
+Metric:avgqu-sz 23.229187
+Metric:wr_sec/s 24808.8
+Metric:tps 135.925
+Metric:rd_sec/s 2284.5005

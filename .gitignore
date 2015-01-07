@@ -5,3 +5,5 @@ packages
 *.tgz
 *.bz2
 *.bin
+*.jar
+*.class

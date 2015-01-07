@@ -1,0 +1,389 @@
+155  [main] INFO  kafka.utils.VerifiableProperties - Verifying properties
+192  [main] INFO  kafka.utils.VerifiableProperties - Property auto.commit.enable is overridden to true
+192  [main] INFO  kafka.utils.VerifiableProperties - Property auto.commit.interval.ms is overridden to 60000
+192  [main] INFO  kafka.utils.VerifiableProperties - Property auto.offset.reset is overridden to smallest
+192  [main] INFO  kafka.utils.VerifiableProperties - Property consumer.timeout.ms is overridden to -1
+193  [main] INFO  kafka.utils.VerifiableProperties - Property fetch.message.max.bytes is overridden to 1048576
+193  [main] INFO  kafka.utils.VerifiableProperties - Property fetch.min.bytes is overridden to 1
+193  [main] INFO  kafka.utils.VerifiableProperties - Property fetch.wait.max.ms is overridden to 100
+193  [main] INFO  kafka.utils.VerifiableProperties - Property group.id is overridden to console-consumer-32943
+193  [main] INFO  kafka.utils.VerifiableProperties - Property refresh.leader.backoff.ms is overridden to 200
+193  [main] INFO  kafka.utils.VerifiableProperties - Property socket.receive.buffer.bytes is overridden to 2097152
+194  [main] INFO  kafka.utils.VerifiableProperties - Property socket.timeout.ms is overridden to 30000
+194  [main] INFO  kafka.utils.VerifiableProperties - Property zookeeper.connect is overridden to 192.168.3.140:2181
+209  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], Connecting to zookeeper instance at 192.168.3.140:2181
+219  [ZkClient-EventThread-11-192.168.3.140:2181] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+258  [main-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+275  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], starting auto committer every 60000 ms
+282  [ZkClient-EventThread-16-192.168.3.140:2181] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+287  [main-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+300  [ZkClient-EventThread-16-192.168.3.140:2181] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+329  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], begin registering consumer console-consumer-32943_de20-1402646284164-73eca5ba in ZK
+372  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], end registering consumer console-consumer-32943_de20-1402646284164-73eca5ba in ZK
+375  [console-consumer-32943_de20-1402646284164-73eca5ba_watcher_executor] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], starting watcher executor thread for consumer console-consumer-32943_de20-1402646284164-73eca5ba
+407  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], begin rebalancing consumer console-consumer-32943_de20-1402646284164-73eca5ba try #0
+636  [main] INFO  kafka.consumer.ConsumerFetcherManager - [ConsumerFetcherManager-1402646284220] Stopping leader finder thread
+637  [main] INFO  kafka.consumer.ConsumerFetcherManager - [ConsumerFetcherManager-1402646284220] Stopping all fetchers
+638  [main] INFO  kafka.consumer.ConsumerFetcherManager - [ConsumerFetcherManager-1402646284220] All connections stopped
+639  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], Cleared all relevant queues for this fetcher
+641  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], Cleared the data chunks in all the consumer message iterators
+641  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], Committing all offsets after clearing the fetcher queues
+642  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], Releasing partition ownership
+646  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], Consumer console-consumer-32943_de20-1402646284164-73eca5ba rebalancing the following partitions: ArrayBuffer(0) for topic trainchannle with consumers: List(console-consumer-32943_de20-1402646284164-73eca5ba-0)
+648  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], console-consumer-32943_de20-1402646284164-73eca5ba-0 attempting to claim partition 0
+661  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], console-consumer-32943_de20-1402646284164-73eca5ba-0 successfully owned partition 0 for topic trainchannle
+662  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], Updating the cache
+665  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], Consumer console-consumer-32943_de20-1402646284164-73eca5ba selected partitions : trainchannle:0: fetched offset = -1: consumed offset = -1
+668  [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread] INFO  kafka.consumer.ConsumerFetcherManager$LeaderFinderThread - [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread], Starting 
+669  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], end rebalancing consumer console-consumer-32943_de20-1402646284164-73eca5ba try #0
+670  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], Creating topic event watcher for topics trainchannle
+681  [main] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], Topics to consume = List(trainchannle)
+698  [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread] INFO  kafka.utils.VerifiableProperties - Verifying properties
+698  [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread] INFO  kafka.utils.VerifiableProperties - Property client.id is overridden to console-consumer-32943
+698  [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread] INFO  kafka.utils.VerifiableProperties - Property metadata.broker.list is overridden to 192.168.3.140:9092
+699  [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread] INFO  kafka.utils.VerifiableProperties - Property request.timeout.ms is overridden to 30000
+727  [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread] INFO  kafka.client.ClientUtils$ - Fetching metadata from broker id:0,host:192.168.3.140,port:9092 with correlation id 0 for 1 topic(s) Set(trainchannle)
+729  [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread] INFO  kafka.producer.SyncProducer - Connected to 192.168.3.140:9092 for producing
+751  [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread] INFO  kafka.producer.SyncProducer - Disconnecting from 192.168.3.140:9092
+768  [ConsumerFetcherThread-console-consumer-32943_de20-1402646284164-73eca5ba-0-0] INFO  kafka.consumer.ConsumerFetcherThread - [ConsumerFetcherThread-console-consumer-32943_de20-1402646284164-73eca5ba-0-0], Starting 
+793  [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread] INFO  kafka.consumer.ConsumerFetcherManager - [ConsumerFetcherManager-1402646284220] Added fetcher for partitions ArrayBuffer([[trainchannle,0], initOffset -1 to broker id:0,host:192.168.3.140,port:9092] )
+Metric:avgqu-sz	0.0
+Metric:avgrq-sz	0.0
+Metric:svctm	0.0
+Metric:svctm	0.09768751
+Metric:svctm	0.14512503
+Metric:svctm	0.17687497
+Metric:%util	0.0
+Metric:avgrq-sz	32.881767
+Metric:avgqu-sz	0.0
+Metric:avgqu-sz	0.0
+Metric:%util	0.045624934
+Metric:tps	0.0
+Metric:tps	1.5874989
+Metric:rd_sec/s	0.0
+Metric:%util	0.050624967
+Metric:await	0.0
+Metric:await	0.0029375553
+Metric:await	0.13837497
+Metric:await	0.22293752
+Metric:avgqu-sz	0.0
+Metric:avgqu-sz	0.0
+Metric:wr_sec/s	0.0
+Metric:wr_sec/s	108.649994
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.0
+Metric:avgqu-sz	0.0
+Metric:avgqu-sz	0.0
+Metric:avgqu-sz	0.0
+Metric:avgqu-sz	0.0
+Metric:svctm	0.2705002
+Metric:svctm	0.36818773
+Metric:svctm	0.41562524
+Metric:avgqu-sz	0.0
+Metric:avgqu-sz	9.3750004E-4
+Metric:avgqu-sz	9.3750004E-4
+Metric:avgqu-sz	9.3750004E-4
+Metric:avgrq-sz	37.042244
+Metric:avgrq-sz	48.029007
+Metric:%util	0.075624935
+Metric:await	0.29875
+Metric:svctm	0.4610627
+Metric:%util	0.08125003
+Metric:%util	0.106249996
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.0
+Metric:await	0.36437523
+Metric:await	0.44018772
+Metric:await	0.5027502
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	9.5
+Metric:rd_sec/s	9.5
+Metric:rd_sec/s	9.5
+Metric:await	0.52975017
+Metric:wr_sec/s	127.25
+Metric:avgrq-sz	53.812645
+Metric:avgqu-sz	9.3750004E-4
+Metric:wr_sec/s	142.07126
+Metric:rd_sec/s	9.5
+Metric:avgqu-sz	9.3750004E-4
+Metric:avgqu-sz	0.0018750002
+Metric:avgqu-sz	0.0018750002
+Metric:svctm	0.47368756
+Metric:rd_sec/s	9.5
+Metric:%util	0.17687498
+Metric:%util	0.19312496
+Metric:rd_sec/s	9.5
+Metric:await	0.5651251
+Metric:rd_sec/s	18.999998
+Metric:rd_sec/s	18.999998
+Metric:rd_sec/s	18.999998
+Metric:avgqu-sz	0.0018750002
+Metric:rd_sec/s	18.999998
+Metric:avgqu-sz	0.0018750002
+Metric:avgqu-sz	0.0018750002
+Metric:avgqu-sz	0.0018750002
+Metric:%util	0.19562496
+Metric:svctm	0.47781256
+Metric:%util	0.20062496
+Metric:rd_sec/s	18.999998
+Metric:svctm	0.54875004
+Metric:svctm	0.5839375
+Metric:rd_sec/s	18.999998
+Metric:await	0.5934378
+Metric:await	0.64362526
+Metric:rd_sec/s	18.999998
+Metric:rd_sec/s	18.999998
+Metric:rd_sec/s	18.999998
+Metric:await	0.64362526
+Metric:avgqu-sz	0.0018750002
+Metric:rd_sec/s	18.999998
+Metric:avgqu-sz	0.0018750002
+Metric:avgqu-sz	0.0018750002
+Metric:avgqu-sz	0.0018750002
+Metric:svctm	0.586
+Metric:svctm	0.5921875
+Metric:svctm	0.6296875
+Metric:rd_sec/s	18.999998
+Metric:rd_sec/s	18.999998
+Metric:await	0.69662523
+Metric:rd_sec/s	18.999998
+Metric:rd_sec/s	18.999998
+Metric:rd_sec/s	18.999998
+Metric:await	0.70281273
+Metric:avgqu-sz	0.0018750002
+Metric:avgqu-sz	0.0018750002
+Metric:rd_sec/s	18.999998
+Metric:avgqu-sz	0.0018750002
+Metric:avgqu-sz	0.0018750002
+Metric:rd_sec/s	18.999998
+Metric:rd_sec/s	18.999998
+Metric:rd_sec/s	18.999998
+Metric:rd_sec/s	18.999998
+Metric:rd_sec/s	18.999998
+Metric:avgqu-sz	0.0018750002
+Metric:avgqu-sz	0.008062499
+Metric:avgqu-sz	0.009937499
+Metric:rd_sec/s	18.999998
+Metric:%util	0.77375007
+Metric:%util	0.936875
+Metric:svctm	0.68631256
+Metric:rd_sec/s	18.999998
+Metric:tps	5.6625004
+Metric:tps	6.1068125
+Metric:rd_sec/s	1035.5
+Metric:rd_sec/s	1054.5
+Metric:rd_sec/s	1054.5
+Metric:avgqu-sz	0.009937499
+Metric:%util	0.938125
+Metric:avgqu-sz	0.014187499
+Metric:avgqu-sz	0.0165625
+Metric:rd_sec/s	1054.5
+Metric:%util	0.9493757
+Metric:%util	1.1837506
+Metric:tps	6.2068753
+Metric:rd_sec/s	1054.5
+Metric:rd_sec/s	1054.5
+Metric:rd_sec/s	1054.5
+Metric:avgqu-sz	0.0165625
+Metric:%util	1.1887506
+Metric:avgqu-sz	0.0206875
+Metric:avgqu-sz	0.0231875
+Metric:rd_sec/s	1054.5
+Metric:%util	1.4300004
+Metric:svctm	0.6962502
+Metric:rd_sec/s	1054.5
+Metric:rd_sec/s	1054.5
+Metric:rd_sec/s	1054.5
+Metric:await	0.73243773
+Metric:avgqu-sz	0.0231875
+Metric:%util	1.4431254
+Metric:avgqu-sz	0.026749998
+Metric:avgqu-sz	0.033125
+Metric:rd_sec/s	1054.5
+Metric:%util	2.2106256
+Metric:%util	2.4175007
+Metric:rd_sec/s	1054.5
+Metric:rd_sec/s	2087.45
+Metric:rd_sec/s	2109.0
+Metric:rd_sec/s	2109.0
+Metric:tps	10.193752
+Metric:tps	11.400002
+Metric:tps	11.750314
+Metric:avgqu-sz	0.033125
+Metric:rd_sec/s	2109.0
+Metric:tps	11.881564
+Metric:rd_sec/s	2109.0
+Metric:avgqu-sz	0.033125
+Metric:rd_sec/s	2109.0
+Metric:rd_sec/s	2109.0
+Metric:await	0.7803754
+Metric:await	0.90768784
+Metric:rd_sec/s	2109.0
+Metric:%util	0.0
+Metric:wr_sec/s	0.0
+Metric:wr_sec/s	302.65015
+Metric:%util	1.6415625
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.24999988
+Metric:await	0.0
+Metric:await	0.72762513
+Metric:rd_sec/s	0.24999994
+Metric:avgqu-sz	0.0
+Metric:avgqu-sz	0.08118749
+Metric:wr_sec/s	442.95007
+Metric:svctm	0.0
+Metric:avgqu-sz	0.10906248
+Metric:svctm	0.36587512
+Metric:%util	2.1625004
+Metric:%util	3.409999
+Metric:%util	3.8040628
+Metric:tps	0.0
+Metric:tps	13.431252
+Metric:rd_sec/s	1166.55
+Metric:rd_sec/s	1166.8
+Metric:rd_sec/s	1166.8
+Metric:tps	122.49375
+Metric:tps	135.925
+Metric:svctm	0.60825014
+Metric:avgrq-sz	0.0
+Metric:avgrq-sz	2.3305569
+Metric:avgrq-sz	27.924189
+Metric:wr_sec/s	1837.6993
+Metric:await	0.8727503
+Metric:wr_sec/s	2327.0996
+Metric:%util	27.86813
+Metric:%util	28.262196
+Metric:await	1.2581875
+Metric:await	1.5905626
+Metric:avgqu-sz	0.35531247
+Metric:svctm	0.9875001
+Metric:svctm	1.3533752
+Metric:avgqu-sz	0.46593744
+Metric:rd_sec/s	1926.0002
+Metric:rd_sec/s	1926.2502
+Metric:rd_sec/s	1926.8002
+Metric:%util	29.41029
+Metric:%util	38.69061
+Metric:avgqu-sz	0.49175006
+Metric:rd_sec/s	2283.9504
+Metric:rd_sec/s	2284.5005
+Metric:wr_sec/s	2580.5999
+Metric:svctm	1.4833436
+Metric:svctm	1.5927181
+Metric:svctm	1.6850619
+Metric:svctm	1.828094
+Metric:await	2.0137496
+Metric:svctm	1.8774686
+Metric:await	2.1220002
+Metric:avgqu-sz	0.0
+Metric:svctm	0.0
+Metric:avgqu-sz	0.027375937
+Metric:rd_sec/s	0.0
+Metric:rd_sec/s	0.0
+Metric:tps	0.0
+Metric:tps	4.950531
+Metric:avgrq-sz	0.0
+Metric:avgrq-sz	0.102752686
+Metric:await	0.0
+Metric:await	0.019219398
+Metric:await	0.6308441
+Metric:rd_sec/s	236.54654
+Metric:rd_sec/s	236.54654
+Metric:rd_sec/s	236.54654
+Metric:%util	0.0
+Metric:%util	0.8768158
+Metric:avgqu-sz	0.036062717
+Metric:svctm	0.6870003
+Metric:svctm	0.77375126
+Metric:tps	53.6073
+Metric:tps	58.55783
+Metric:wr_sec/s	0.0
+Metric:wr_sec/s	19.96875
+Metric:wr_sec/s	1186.2837
+Metric:avgrq-sz	0.9056206
+Metric:avgrq-sz	1.0083733
+Metric:rd_sec/s	236.54654
+Metric:wr_sec/s	1193.229
+Metric:wr_sec/s	1213.1978
+Metric:wr_sec/s	1268.7275
+Metric:tps	59.19568
+Metric:await	0.6343126
+Metric:avgqu-sz	0.03837514
+Metric:rd_sec/s	236.54654
+Metric:avgrq-sz	1.0288086
+Metric:%util	0.8899689
+Metric:await	0.6361866
+Metric:await	0.6396551
+Metric:await	0.7685318
+Metric:svctm	0.81481457
+Metric:avgqu-sz	0.043062925
+Metric:avgrq-sz	1.0301838
+Metric:avgrq-sz	1.0475597
+Metric:avgrq-sz	1.0639343
+Metric:rd_sec/s	244.64156
+Metric:rd_sec/s	244.64156
+Metric:rd_sec/s	244.64156
+Metric:rd_sec/s	244.64156
+Metric:rd_sec/s	244.64156
+Metric:rd_sec/s	254.305
+Metric:rd_sec/s	254.305
+Metric:rd_sec/s	254.305
+Metric:rd_sec/s	254.305
+Metric:rd_sec/s	254.305
+Metric:rd_sec/s	254.305
+Metric:%util	0.89216614
+Metric:%util	0.90948486
+Metric:rd_sec/s	259.0416
+Metric:rd_sec/s	259.0416
+Metric:rd_sec/s	259.0416
+Metric:rd_sec/s	259.0416
+Metric:rd_sec/s	259.0416
+Metric:tps	61.110138
+Metric:svctm	0.8313761
+Metric:tps	62.763275
+Metric:avgqu-sz	0.047750235
+Metric:await	0.77403164
+Metric:await	0.77478504
+Metric:svctm	0.8933754
+Metric:await	0.8162813
+Metric:%util	0.91256714
+Metric:svctm	0.89337826
+Metric:%util	0.9126129
+Metric:await	0.84115696
+Metric:svctm	0.90587616
+Metric:%util	6.380005
+Metric:await	0.84134483
+Metric:avgqu-sz	0.07756257
+Metric:wr_sec/s	1281.4639
+Metric:%util	6.4042816
+Metric:await	0.87931347
+Metric:await	0.89097023
+Metric:svctm	0.9711895
+Metric:tps	63.84137
+Metric:%util	7.067581
+Metric:svctm	1.0524101
+21074 [Thread-4] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], ZKConsumerConnector shutting down
+21074 [Thread-4] INFO  kafka.consumer.ZookeeperTopicEventWatcher - Shutting down topic event watcher.
+21075 [Thread-4] INFO  kafka.consumer.ConsumerFetcherManager - [ConsumerFetcherManager-1402646284220] Stopping leader finder thread
+21076 [Thread-4] INFO  kafka.consumer.ConsumerFetcherManager$LeaderFinderThread - [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread], Shutting down
+21076 [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread] INFO  kafka.consumer.ConsumerFetcherManager$LeaderFinderThread - [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread], Stopped 
+21077 [Thread-4] INFO  kafka.consumer.ConsumerFetcherManager$LeaderFinderThread - [console-consumer-32943_de20-1402646284164-73eca5ba-leader-finder-thread], Shutdown completed
+21077 [Thread-4] INFO  kafka.consumer.ConsumerFetcherManager - [ConsumerFetcherManager-1402646284220] Stopping all fetchers
+21077 [Thread-4] INFO  kafka.consumer.ConsumerFetcherThread - [ConsumerFetcherThread-console-consumer-32943_de20-1402646284164-73eca5ba-0-0], Shutting down
+21100 [ConsumerFetcherThread-console-consumer-32943_de20-1402646284164-73eca5ba-0-0] WARN  kafka.consumer.SimpleConsumer - Reconnect due to socket error: null
+21101 [ConsumerFetcherThread-console-consumer-32943_de20-1402646284164-73eca5ba-0-0] INFO  kafka.consumer.ConsumerFetcherThread - [ConsumerFetcherThread-console-consumer-32943_de20-1402646284164-73eca5ba-0-0], Stopped 
+21101 [Thread-4] INFO  kafka.consumer.ConsumerFetcherThread - [ConsumerFetcherThread-console-consumer-32943_de20-1402646284164-73eca5ba-0-0], Shutdown completed
+21101 [Thread-4] INFO  kafka.consumer.ConsumerFetcherManager - [ConsumerFetcherManager-1402646284220] All connections stopped
+21112 [ZkClient-EventThread-11-192.168.3.140:2181] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+21114 [Thread-4] INFO  kafka.consumer.ZookeeperConsumerConnector - [console-consumer-32943_de20-1402646284164-73eca5ba], ZKConsumerConnector shut down completed
+21115 [ZkClient-EventThread-27-192.168.3.140:2181] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+21118 [Thread-4-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+21131 [ZkClient-EventThread-27-192.168.3.140:2181] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
