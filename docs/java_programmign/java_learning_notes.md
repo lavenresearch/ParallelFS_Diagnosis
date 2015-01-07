@@ -620,6 +620,12 @@ In java.util.Arrays class:
     String s3 = Integer.toString(i); 
 
 ## Collection
+### useful information
+
+1. [traverse a collection for Map](traversehttp://www.cnblogs.com/fczjuever/archive/2013/04/07/3005997.html)
+
+### basic concepts
+
 A collections framework is a unified architecture for representing and manipulating collections. All collections frameworks contain the following:
 
 - Interfaces: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation. In object-oriented languages, interfaces generally form a hierarchy.

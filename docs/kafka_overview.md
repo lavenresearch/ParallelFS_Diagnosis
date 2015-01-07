@@ -15,6 +15,7 @@ order guarantee within partition.
 
 passive replicate.
 
+
 ## install and usage
 1. start zookeeper service
 2. download kafka
@@ -32,3 +33,11 @@ passive replicate.
 7. setting up a multi-broker cluster
     * see document
 
+## kafka API
+1. use java program as an producer(how to send messages to kafka cluster in java) [Program Example](https://cwiki.apache.org/confluence/display/KAFKA/0.8.0+Producer+Example)
+
+## integrate kafka with storm
+1. use Storm-Kafka-0.8-plus, which provide "KafkaSpout" as Spout, [an simple program example](http://blog.csdn.net/xeseo/article/details/18615761).
+
+## kafka maven dependency
+1. http://stackoverflow.com/questions/17037209/where-can-i-find-maven-repository-for-kafka

@@ -1,4 +1,9 @@
 # ParallelFS Diagnosis Architecture Overview -- key parameter specification
+## problems in first version implementation
+### In CompPDFBolt
+1. the total number of the nodes in cluster is _specified_ in the _CODE_, and due to maintain a nodeList _without providing remove method_ of the node in nodeList, so, node failure would cause the software to behave abnormally.
+2. do not delete stale state information, like distanceLists for each node each metric, which will make the server run out of memory.
+
 ## architecture
 ![architecture overview](./PFSD_overview.png)
 
@@ -10,10 +15,11 @@
 4. how to split PDF comparison tasks(__split by metric__)
 
 ## spout
-there are two options to implement spout:
+the way to implement spout:
 
-1. use python reading monitoring data from ganglia and send it to kestrel, use storm consume tuples from kestrel.
-2. use java related rrd API to read data directly from ganglia.
+1. use python collect node status data with sysstat
+2. send data to kafka cluster
+3. use storm read status data directly from kafka message queue in spout.
 
 ## moving average
 5 point moving average. 
@@ -40,22 +46,22 @@ calculate the distances of each node with all other nodes. if half of the distan
 3. maintain a "PDFbuffer" for each node each metric. indexed by "TimeStamp".
 4. when a new tuple arrives, calculate the PDF distance of the related node and metric to others. and compare the calculation result with the "threshold", then set the comparison result to the "DistanceList"s of the "TimeStamp" for all node involved if exists( a distance involves two nodes). add 1 to the "AnomalousCounter" of "NormalCounter" for each changed "DistanceList". check the "AnomalousCounter" and "NormalCounter" of all nodes of the "TimeStamp", if one of the two is larger than half of "DistanceList" size, then send the appropriate tuple, and delete the "DistanceList" of "TimeStamp" for the node.
 5. now just specify an certain size for "PDFbuffer". just remove oldest PDF when new PDF tuple arrives[^PDFbufferAlternativeManage].
-6. send tuple in form of [NodeID, MetricName, TimeStamp, Behavior].
+6. send tuple in form of [NodeID, MetricName, TimeStamp, Status].
 
 ## performance bottleneck locating
 locating the faulty server. when a server have receive more than "k" tuple that reporting a server is anomalous in one metric in last "2k-1" tuples, the server is marked as anomalous.
 
-1. receive tuple in form of [NodeID, MetricName, TimeStamp, Behavior].
+1. receive tuple in form of [NodeID, MetricName, TimeStamp, Status].
 2. maintain a "StatusQueue" for each node each metric in size of "2k-1".
 3. update "StatusQueue" of the node the metric and calculate the amount of the tuples that are marked as anomalous in the "StatusQueue", when a new tuple of the node the metric arrives. if the amount is larger than "k", then send tuple that report fault.
 4. send tuple in form of [NodeID, TimeStamp] to result display bolt.
-5. send tuple in form of [NodeID, MetricName, TimeStamp, Behavior] to faulty resource diagnosis bolt.
+5. send tuple in form of [NodeID, MetricName, TimeStamp, Status] to faulty resource diagnosis bolt.
 
 ## faulty resource diagnosis
 analysis and determine which resource is responsible for performance degradation of the faulty server.
 
-1. receive tuple in form of [NodeID, MetricName, TimeStamp, Behavior].
-2. for each faulty node, analysis the faulty metric and behavior, to determine the scarce resource.
+1. receive tuple in form of [NodeID, MetricName, TimeStamp, Status].
+2. for each faulty node, analysis the faulty metric and Status, to determine the scarce resource.
 3. send tuple in form of [NodeID, TimeStamp, ScarceResourceType] to result display bolt.
 
 ## result display

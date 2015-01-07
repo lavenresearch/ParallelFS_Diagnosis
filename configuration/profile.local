@@ -1,0 +1,12 @@
+CLASSPATH=$CLASSPATH:/opt/apache-storm-0.9.1-incubating/*
+CLASSPATH=$CLASSPATH:/opt/apache-storm-0.9.1-incubating/conf/
+CLASSPATH=$CLASSPATH:/opt/apache-storm-0.9.1-incubating/lib/*
+CLASSPATH=$CLASSPATH:/opt/kafka_2.10-0.8.1.1/libs/*
+CLASSPATH=$CLASSPATH:/opt/zookeeper-3.4.6/lib/*
+export CLASSPATH
+PATH=$PATH:/opt/apache-storm-0.9.1-incubating/bin/
+PATH=$PATH:/opt/apache-maven-3.2.1/bin/
+PATH=$PATH:/opt/jdk1.6.0_45/bin/
+PATH=$PATH:/opt/kafka_2.10-0.8.1.1/bin/
+PATH=$PATH:/opt/zookeeper-3.4.6/bin/
+export PATH
